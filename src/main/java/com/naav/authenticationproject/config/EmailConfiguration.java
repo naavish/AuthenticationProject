@@ -20,7 +20,7 @@ public class EmailConfiguration {
     public JavaMailSender javaMailSender(){
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.gmail.com");
-        mailSender.setHost("587");
+        mailSender.setPort(587);
         mailSender.setUsername(emailUsername);
         mailSender.setPassword(password);
 
