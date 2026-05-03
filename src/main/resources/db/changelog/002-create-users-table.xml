@@ -4,8 +4,12 @@
         <sql>
             CREATE TABLE authentication.users (
             id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+            username VARCHAR(30) NOT NULL,
             email VARCHAR(255) NOT NULL UNIQUE,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            password VARCHAR(255),
+            enabled BOOLEAN,
+            verification_code VARCHAR,
+            verification_expiration TIMESTAMP
             );
         </sql>
     </changeSet>
